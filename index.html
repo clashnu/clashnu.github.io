@@ -1,1 +1,442 @@
-<h2>Clash免费订阅 </h2>
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>clash订阅-clash节点-clash官网</title>
+    <meta name="description" content="通过Clash订阅日历管理功能，服务周期以时间轴形式清晰呈现。用户启用Clash订阅流量雕塑功能后，可手动分配带宽优先级，关键应用始终独占高速通道。（关键词：Clash订阅日历管理 / Clash订阅流量雕塑）
+">
+    <meta name="keywords" content="clash订阅,clash节点,clash官网">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="shortcut icon" href="favicon.ico">
+    <style>
+        :root {
+            --gold-primary: #FFD700;
+            --gold-secondary: #D4AF37;
+            --dark-bg: #1a1a1a;
+            --text-light: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        body {
+            background: var(--dark-bg);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* 导航栏 */
+        .navbar {
+            background: linear-gradient(135deg, #3d3d3d 0%, #1a1a1a 100%);
+            padding: 1.2rem 0;
+            border-bottom: 2px solid var(--gold-primary);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, var(--gold-primary), var(--gold-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-link {
+            color: var(--text-light);
+            text-decoration: none;
+            margin-left: 2rem;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: var(--gold-primary);
+        }
+
+        /* 主视觉区 */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                        url('https://example.com/hero-bg.jpg') center/cover;
+            padding: 8rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(45deg, var(--gold-primary), var(--gold-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .lead {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        /* 按钮样式 */
+        .cta-group {
+            margin-top: 3rem;
+        }
+
+        .cta-premium {
+            display: inline-flex;
+            align-items: center;
+            padding: 1.2rem 2.5rem;
+            background: linear-gradient(135deg, var(--gold-primary), var(--gold-secondary));
+            color: var(--dark-bg) !important;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255,215,0,0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-premium::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, 
+                transparent 20%, 
+                rgba(255,255,255,0.2) 45%,
+                transparent 70%
+            );
+            animation: shine 3s infinite;
+        }
+
+        .cta-premium:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255,215,0,0.5);
+        }
+
+        .cta-secondary {
+            display: inline-flex;
+            align-items: center;
+            padding: 1.2rem 2.5rem;
+            border: 2px solid var(--gold-primary);
+            color: var(--gold-primary) !important;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 1rem;
+            transition: all 0.3s ease;
+            position: relative;
+            background: rgba(255,215,0,0.1);
+        }
+
+        .cta-secondary:hover {
+            background: rgba(255,215,0,0.2);
+            transform: translateY(-3px);
+        }
+
+        /* 功能区块 */
+        .section-header {
+            text-align: center;
+            padding: 4rem 0;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding-bottom: 4rem;
+        }
+
+        .feature-card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,215,0,0.2);
+            border-radius: 15px;
+            padding: 2.5rem;
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .gold-icon {
+            font-size: 2.5rem;
+            color: var(--gold-primary);
+            margin-bottom: 1rem;
+        }
+
+        /* 价格套餐 */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            padding: 2rem 0;
+        }
+
+        .pricing-card {
+            background: linear-gradient(145deg, #2a2a2a 0%, #1a1a1a 100%);
+            border: 2px solid var(--gold-primary);
+            border-radius: 15px;
+            padding: 3rem;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .pricing-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, 
+                transparent 20%, 
+                rgba(255,215,0,0.1) 45%,
+                transparent 70%
+            );
+            animation: shine 3s infinite;
+        }
+
+        /* 用户评价 */
+        .testimonials {
+            padding: 4rem 0;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial {
+            background: rgba(255,255,255,0.05);
+            border-left: 4px solid var(--gold-primary);
+            padding: 2rem;
+            position: relative;
+        }
+
+        /* 技术支持 */
+        .support-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            padding: 4rem 0;
+        }
+
+        .support-card {
+            text-align: center;
+            padding: 2rem;
+            border: 1px solid rgba(255,215,0,0.2);
+            border-radius: 15px;
+        }
+
+        /* 页脚 */
+        footer {
+            background: #0d0d0d;
+            padding: 4rem 0;
+            margin-top: 4rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .footer-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            opacity: 0.8;
+        }
+
+        .footer-links a:hover {
+            color: var(--gold-primary);
+        }
+
+        @keyframes shine {
+            100% { transform: rotate(360deg); }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .navbar .container { flex-direction: column; }
+            .nav-links { margin-top: 1rem; }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div id="tLHEMUoonD" class="container">
+            <div id="TJKKDh1XEv" class="logo">clash订阅</div>
+            <div id="EaPAG3qqIA" class="nav-links">
+                <a href="#features" class="nav-link">产品优势</a>
+                <a href="#pricing" class="nav-link">套餐价格</a>
+                <a href="#support" class="nav-link">技术支持</a>
+            </div>
+        </div>
+    </nav>
+    <section class="hero">
+        <div id="xkG7nAhLjD" class="container">
+            <h1>尊享级全球网络加速体验</h1>
+            <p class="lead">金融级安全防护 | 8K流媒体支持 | 极速游戏节点</p>
+            <div id="LYOBx16SX0" class="cta-group">
+                <a href="https://china-vpn.cc" class="cta-premium">免费注册</a>
+                <a href="https://china-vpn.cc" class="cta-secondary">了解详情</a>
+            </div>
+        </div>
+    </section>
+    <section id="features" class="container">
+        <div id="nGdrKrKgID" class="section-header">
+            <h2>核心优势</h2>
+            <p>为什么选择clash订阅？</p>
+        </div>
+        <div id="3cQX9vwGnk" class="features-grid">
+            <div id="CNyVtLls3L" class="feature-card">
+                <i class="fas fa-shield-alt gold-icon"></i>
+                <h3>金融级安全</h3>
+                <p>AES-256加密 + TLS1.3协议 + 双重验证保护</p>
+                <ul class="feature-list">
+                    <li>银行同等级别加密技术</li>
+                    <li>DNS/IPv6泄露保护</li>
+                    <li>自动终止开关</li>
+                </ul>
+            </div>
+            <div id="MbhfzQQMcS" class="feature-card">
+                <i class="fas fa-globe gold-icon"></i>
+                <h3>全球覆盖</h3>
+                <p>90+国家/地区 | 5000+专属服务器</p>
+                <div id="1iPj6p3Ju8" class="server-map">
+                    <!-- 此处可添加世界地图矢量图 -->
+                </div>
+            </div>
+            <div id="iMW8aH1o5L" class="feature-card">
+                <i class="fas fa-tachometer-alt gold-icon"></i>
+                <h3>极速体验</h3>
+                <p>10Gbps带宽 | 智能路由优化</p>
+                <div id="7hfNaNMCa9" class="speed-test">
+                    <div id="V0gbuKijRK" class="speed-meter">
+                        <div id="qAriQy6vSe" class="speed-fill" style="width: 95%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="pricing" class="container">
+        <div id="GT94pXTyDS" class="section-header">
+            <h2>尊享套餐</h2>
+            <p>选择最适合您的方案</p>
+        </div>
+        <div id="AHf4OHKM24" class="pricing-grid">
+            <div id="geONBx1xnF" class="pricing-card">
+                <h3>黄金会员</h3>
+                <div id="yFp63Q5TY6" class="price">$1.99<span>/月</span></div>
+                <ul class="features">
+                    <li>✓ 全平台支持</li>
+                    <li>✓ 500+专属节点</li>
+                    <li>✓ 24/7标准支持</li>
+                </ul>
+                <a href="#" class="cta-premium">立即开通</a>
+            </div>
+            <div id="CTZPwqNQyR" class="pricing-card">
+                <h3>铂金会员</h3>
+                <div id="ZVkdmwAFNJ" class="price">$2.99<span>/月</span></div>
+                <ul class="features">
+                    <li>✓ 所有黄金功能</li>
+                    <li>✓ 5000+专属节点</li>
+                    <li>✓ VIP专属支持</li>
+                </ul>
+                <a href="#" class="cta-premium">尊享特权</a>
+            </div>
+        </div>
+    </section>
+    <section class="testimonials container">
+        <div id="lcmjZeGgFl" class="section-header">
+            <h2>用户见证</h2>
+            <p>全球用户的真实评价</p>
+        </div>
+        <div id="0JIPF3WhLJ" class="testimonial-grid">
+            <div id="nVCexQ4sp1" class="testimonial">
+                <p>"clashnu订阅的安全性能完全满足我们金融机构的远程办公需求，审计团队也认可其安全性。"</p>
+                <div id="qIQP0rHXH8" class="user-info">
+                    <h4>张先生</h4>
+                    <p>金融安全总监</p>
+                </div>
+            </div>
+            <div id="cfHmyRbuqk" class="testimonial">
+                <p>"全球节点响应速度超预期，技术团队的支持响应速度令人印象深刻。"</p>
+                <div id="li2mVHiHUU" class="user-info">
+                    <h4>李女士</h4>
+                    <p>跨国企业CTO</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="support" class="container">
+        <div id="s6Bjr2ZBcn" class="section-header">
+            <h2>技术支持</h2>
+            <p>我们随时为您服务</p>
+        </div>
+        <div id="n830oOu4u0" class="support-grid">
+            <div id="g6fMIkZKVP" class="support-card">
+                <i class="fas fa-headset gold-icon" style="font-size: 3rem;"></i>
+                <h3>24/7 专属支持</h3>
+                <p>VIP用户直通技术专家</p>
+            </div>
+            <div id="pYgTEOvr48" class="support-card">
+                <i class="fas fa-download gold-icon" style="font-size: 3rem;"></i>
+                <h3>全平台支持</h3>
+                <div id="nPpk005lAm" class="platforms">
+                    <i class="fab fa-windows"></i>
+                    <i class="fab fa-apple"></i>
+                    <i class="fab fa-android"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div id="7STqlQG0O6" class="container">
+            <div id="bvJ5dCBEwt" class="footer-links">
+                <a href="#">服务条款</a>
+                <a href="#">隐私政策</a>
+                <a href="#">法律声明</a>
+                <a href="#">联系我们</a>
+            </div>
+            <p style="text-align: center; margin-top: 2rem; opacity: 0.7;">
+                © 2023 clash订阅. 版权所有 | 沪ICP备12345678号
+            </p>
+        </div>
+    </footer>
+    <a href="/sitemap.xml">SiteMap</a>
+</body>
+
+</html> clashx订阅 clash的订阅 clash订阅教程 clash订阅什么意思 clash订阅地址怎么用 clash付费订阅 clash订阅购买 clash订阅设置 clash 订阅失败 clash 如何订阅
